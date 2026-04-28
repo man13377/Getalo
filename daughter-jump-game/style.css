@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Rubik:wght@400;600;700&display=swap");
+
+:root {
+  --bg-top: #c5f4ff;
+  --bg-bottom: #fff6d9;
+  --ink: #1c2d4b;
+  --mint: #24c8a3;
+  --peach: #ffad72;
+  --sky: #65b5ff;
+  --card: rgb(255 255 255 / 80%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 20%, rgb(255 255 255 / 80%) 0 18%, transparent 19%),
+    radial-gradient(circle at 82% 4%, rgb(255 255 255 / 70%) 0 16%, transparent 18%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.game-shell {
+  width: min(1000px, 100%);
+  display: grid;
+  gap: 14px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--card);
+  border: 2px solid rgb(255 255 255 / 65%);
+  box-shadow: 0 10px 30px rgb(42 50 102 / 16%);
+  border-radius: 20px;
+  padding: 14px 18px;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#character-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(255 255 255 / 86%);
+  box-shadow: 0 6px 14px rgb(28 45 75 / 26%);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1;
+}
+
+.top-bar p {
+  margin: 4px 0 0;
+  font-size: 0.94rem;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+}
+
+.top-controls {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+#sound-toggle {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #2fcdb0, #4fa8ff);
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgb(36 57 86 / 20%);
+}
+
+#sound-toggle:hover {
+  filter: brightness(1.08);
+}
+
+#sound-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, #8f95a5, #7a859a);
+}
+
+.pill {
+  min-width: 86px;
+  background: rgb(255 255 255 / 88%);
+  border: 2px solid rgb(101 181 255 / 38%);
+  border-radius: 14px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.pill span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pill strong {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.playfield {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 3px solid rgb(255 255 255 / 72%);
+  box-shadow: 0 24px 42px rgb(36 57 86 / 24%);
+}
+
+#game-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: linear-gradient(#98dcff, #f6e3ba);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  background: rgb(23 37 69 / 60%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.overlay p {
+  margin: 0;
+  max-width: 38ch;
+}
+
+#restart-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--mint), #2db7f5);
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  filter: brightness(1.08);
+}
+
+.controls {
+  text-align: center;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 10px 12px;
+  border: 2px solid rgb(255 255 255 / 70%);
+}
+
+.controls p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid rgb(28 45 75 / 32%);
+  background: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 12px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats {
+    justify-content: flex-start;
+  }
+
+  .top-controls {
+    justify-items: start;
+  }
+}

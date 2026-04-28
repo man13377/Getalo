@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getalo</title>
+    <link rel="stylesheet" href="./styles/menu.css" />
+    <link rel="stylesheet" href="./styles/forms.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="left-rail is-expanded" aria-label="Основное меню">
+      <button
+        class="left-rail__toggle"
+        type="button"
+        aria-expanded="true"
+        aria-controls="left-rail-menu"
+        aria-label="Меню разделов"
+        disabled
+      >
+        <span class="left-rail__toggle-logo" aria-hidden="true">
+          <img src="./getalo-logo.png" alt="" />
+        </span>
+        <span class="left-rail__toggle-text">Меню</span>
+        <span class="left-rail__toggle-close" aria-hidden="true">×</span>
+      </button>
+
+      <div class="left-rail__menu" id="left-rail-menu">
+        <a href="#top" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Главная</span>
+        </a>
+        <a href="#advantages" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Преимущества</span>
+        </a>
+        <a href="#countertop-lab" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Столешницы</span>
+        </a>
+        <a href="#products-services" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Изделия</span>
+        </a>
+        <a href="#promo-block" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Замена</span>
+        </a>
+        <a href="#params-builder" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Параметры</span>
+        </a>
+        <a href="#edge-profiles" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Кромки</span>
+        </a>
+        <a href="#finish-calculator" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Комплектация</span>
+        </a>
+        <a href="#sinks-catalog" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Мойки</span>
+        </a>
+        <a href="#works-gallery" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Галерея</span>
+        </a>
+        <a href="#order-form" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Заказ</span>
+        </a>
+        <a href="#price-advantage" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Цены ниже</span>
+        </a>
+        <a href="#contacts" class="rail-item">
+          <span class="rail-icon"></span>
+          <span>Контакты</span>
+        </a>
+      </div>
+    </nav>
+
+    <aside class="right-rail" aria-label="Связаться с нами">
+      <p class="right-rail__title">Связаться с нами</p>
+
+      <a class="right-rail__item right-rail__item--phone" href="#" target="_blank" rel="noopener">
+        <span class="right-rail__icon" aria-hidden="true">☎</span>
+        <span class="right-rail__text">Телефон</span>
+      </a>
+
+      <a class="right-rail__item right-rail__item--max" href="#" target="_blank" rel="noopener">
+        <span class="right-rail__icon" aria-hidden="true">M</span>
+        <span class="right-rail__text">MAX</span>
+      </a>
+
+      <a class="right-rail__item right-rail__item--telegram" href="https://t.me/" target="_blank" rel="noopener">
+        <span class="right-rail__icon" aria-hidden="true">T</span>
+        <span class="right-rail__text">Telegram</span>
+      </a>
+    </aside>
+
+    <main class="landing-wrap">
+      <section class="screen" id="top">
+        <header class="top-header">
+          <div class="brand-block">
+            <a class="brand-badge brand-badge--logo" href="#top" aria-label="Getalo">
+              <img src="./getalo-logo.png" alt="Логотип Getalo" />
+              <span class="brand-badge__glow" aria-hidden="true"></span>
+            </a>
+            <p>
+              Изделия из искусственного камня по Москве и Московской области
+            </p>
+          </div>
+
+          <div class="header-center">
+            <p>БЦ "Золотая Долина", офис 419</p>
+            <p>Пн-Пт: 11:00–19:00</p>
+            <p>Сб-Вс: 12:00–17:00</p>
+            <a href="#">написать нам</a>
+          </div>
+
+          <div class="header-right">
+            <a class="phone" href="tel:+74950000000">8(495) 000-00-00</a>
+            <div class="top-buttons">
+              <button type="button" data-lead-open="call">заказать звонок</button>
+              <button type="button" data-lead-open="calc-base">получить расчет</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="title-strip">
+          <h1>Столешницы и другие изделия из искусственного камня от производителя.</h1>
+          <p>Сделаем на кухню без переплат посредникам по Москве и области. Гарантия 10 лет.</p>
+        </section>
+
+        <section class="hero-stage" aria-label="Пример кухни">
+          <article class="left-offer">
+            <h2>АКЦИЯ!</h2>
+            <ul>
+              <li>Скидка 5000 ₽</li>
+              <li>Бесплатный замер</li>
+              <li>Разделочная доска из камня в подарок</li>
+              <li>Мойка в подарок</li>
+            </ul>
+            <p class="left-offer__note">мойка из нержавейки с верхним монтажом</p>
+          </article>
+
+          <form class="right-form">
+            <h2>
+              УЗНАЙТЕ СТОИМОСТЬ<br />
+              ВАШЕЙ СТОЛЕШНИЦЫ<br />
+              ЗА 5 МИНУТ!
+            </h2>
+            <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required />
+            <input type="text" name="name" placeholder="ВАШЕ ИМЯ" required />
+            <button type="submit">ПОЛУЧИТЬ СКИДКУ!</button>
+          </form>
+        </section>
+
+        <section class="thumb-strip" aria-label="Примеры работ">
+          <button class="thumb-arrow" type="button" aria-label="Следующее фото"></button>
+          <div class="thumb-row">
+            <div class="thumb thumb--active"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+          </div>
+        </section>
+
+        <section class="trust-block" id="advantages" aria-label="Почему выбирают нас">
+          <header class="trust-head">
+            <p>С НАМИ СПОКОЙНО</p>
+            <h2>ПОЧЕМУ БОЛЕЕ 750 КЛИЕНТОВ ВЫБРАЛИ ИМЕННО НАС</h2>
+          </header>
+
+          <div class="trust-grid">
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">01</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="20">20</span>
+                <span class="trust-card__suffix">%</span>
+              </div>
+              <h3>Цена ниже салонов</h3>
+              <p>Собственное производство без переплат за шоурум и посредников.</p>
+              <div class="trust-card__detail">
+                Фиксируем смету до подписания договора. Никаких доплат в процессе монтажа.
+              </div>
+            </button>
+
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">02</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="5">5</span>
+                <span class="trust-card__suffix">дн</span>
+              </div>
+              <h3>Изготовление от 5 дней</h3>
+              <p>Стартуем сразу после замера, работаем на своем оборудовании без очередей.</p>
+              <div class="trust-card__detail">
+                Поддерживаем статус заказа в мессенджере: этапы видны в реальном времени.
+              </div>
+            </button>
+
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">03</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="1000">1000</span>
+                <span class="trust-card__suffix">+</span>
+              </div>
+              <h3>Образцов в наличии</h3>
+              <p>Покажем фактуру на месте, чтобы цвет и текстура точно попали в интерьер.</p>
+              <div class="trust-card__detail">
+                Учитываем освещение помещения и подбираем несколько близких оттенков на выбор.
+              </div>
+            </button>
+
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">04</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="10">10</span>
+                <span class="trust-card__suffix">лет</span>
+              </div>
+              <h3>Гарантия до 10 лет</h3>
+              <p>Используем сертифицированный камень и официальную фурнитуру.</p>
+              <div class="trust-card__detail">
+                Если появляется дефект по нашей вине, выезжаем и устраняем его бесплатно.
+              </div>
+            </button>
+
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">05</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="100">100</span>
+                <span class="trust-card__suffix">%</span>
+              </div>
+              <h3>Только качественные материалы из Кореи!</h3>
+              <p>Используем проверенные корейские материалы с высокой износостойкостью.</p>
+              <div class="trust-card__detail">
+                Перед запуском в работу показываем реальные образцы и подтверждаем происхождение.
+              </div>
+            </button>
+
+            <button class="trust-card" type="button">
+              <span class="trust-card__index">06</span>
+              <div class="trust-card__metric">
+                <span class="trust-card__number" data-target="24">24</span>
+                <span class="trust-card__suffix">/7</span>
+              </div>
+              <h3>Поддержка каждый день</h3>
+              <p>Отвечаем на вопросы после монтажа и ведем клиентов до полного результата.</p>
+              <div class="trust-card__detail">
+                Мы на связи в выходные и вечером, чтобы ваш ремонт не останавливался.
+              </div>
+            </button>
+          </div>
+
+          <section
+            class="countertop-lab"
+            id="countertop-lab"
+            aria-label="Типы столешниц и этапы работ"
+          >
+            <div class="countertop-lab__head">
+              <h3>Подберите тип столешницы и посмотрите этапы работ</h3>
+              <p>Листайте карточки и переключайте режим: изготовление или установка.</p>
+            </div>
+
+            <div class="countertop-lab__body">
+              <div class="countertop-chooser">
+                <div class="countertop-cards" role="listbox" aria-label="Типы столешниц">
+                  <button class="countertop-card is-active" type="button" data-type="straight">
+                    <span class="countertop-card__name">Прямая</span>
+                    <span class="countertop-card__meta">Классика для линейной кухни</span>
+                  </button>
+                  <button class="countertop-card" type="button" data-type="corner">
+                    <span class="countertop-card__name">Угловая</span>
+                    <span class="countertop-card__meta">Максимум рабочей зоны</span>
+                  </button>
+                  <button class="countertop-card" type="button" data-type="u-shaped">
+                    <span class="countertop-card__name">П-образная</span>
+                    <span class="countertop-card__meta">Максимум рабочей поверхности</span>
+                  </button>
+                  <button class="countertop-card" type="button" data-type="island">
+                    <span class="countertop-card__name">С островом</span>
+                    <span class="countertop-card__meta">Премиальный формат кухни</span>
+                  </button>
+                </div>
+
+                <div class="countertop-nav">
+                  <button class="countertop-nav__btn" type="button" data-nav="-1">Предыдущая</button>
+                  <button class="countertop-nav__btn" type="button" data-nav="1">Следующая</button>
+                </div>
+              </div>
+
+              <article class="countertop-viewer">
+                <div class="countertop-viewer__preview">
+                  <div class="countertop-viewer__image"></div>
+                  <div class="countertop-viewer__badge" data-field="material">Акрил Staron</div>
+                </div>
+
+                <div class="countertop-viewer__main">
+                  <h4 data-field="title">Прямая столешница</h4>
+                  <p data-field="description">
+                    Универсальный вариант для большинства кухонь с аккуратной геометрией.
+                  </p>
+
+                  <div class="countertop-specs">
+                    <div class="countertop-spec">
+                      <span>Толщина</span>
+                      <strong data-field="thickness">38 мм</strong>
+                    </div>
+                    <div class="countertop-spec">
+                      <span>Профиль</span>
+                      <strong data-field="edge">№1</strong>
+                    </div>
+                    <div class="countertop-spec">
+                      <span>Стоимость</span>
+                      <strong data-field="price">от 38 900 ₽</strong>
+                    </div>
+                  </div>
+
+                  <div class="process-switch" role="tablist" aria-label="Режим процесса">
+                    <button class="process-switch__btn is-active" type="button" data-mode="manufacture">
+                      Изготовление
+                    </button>
+                    <button class="process-switch__btn" type="button" data-mode="install">
+                      Установка
+                    </button>
+                  </div>
+
+                  <ol class="process-list"></ol>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <p class="trust-tip">Наведите курсор на карточку или нажмите на нее, чтобы раскрыть детали.</p>
+        </section>
+
+        <section class="offers-block" id="products-services" aria-label="Наши изделия и услуги">
+          <header class="offers-head">
+            <p>КАТАЛОГ РАБОТ</p>
+            <h2>НАШИ ИЗДЕЛИЯ И УСЛУГИ</h2>
+          </header>
+
+          <div class="offers-switch" role="tablist" aria-label="Режим каталога">
+            <button class="offers-switch__btn is-active" type="button" data-offer-mode="products">
+              Изделия
+            </button>
+            <button class="offers-switch__btn" type="button" data-offer-mode="services">
+              Услуги
+            </button>
+          </div>
+
+          <div class="offers-stage">
+            <div class="offers-list" role="listbox" aria-label="Карточки изделий и услуг"></div>
+
+            <article class="offer-showcase">
+              <div class="offer-showcase__visual">
+                <div class="offer-showcase__image"></div>
+                <span class="offer-showcase__badge" data-offer-field="badge">ХИТ</span>
+              </div>
+
+              <div class="offer-showcase__content">
+                <h3 data-offer-field="title">Столешницы для кухни</h3>
+                <p data-offer-field="description">
+                  Изготавливаем и устанавливаем столешницы под ваш размер с точной подгонкой.
+                </p>
+
+                <ul class="offer-features"></ul>
+
+                <div class="offer-meta">
+                  <div class="offer-meta__item">
+                    <span>Срок</span>
+                    <strong data-offer-field="timeline">от 5 дней</strong>
+                  </div>
+                  <div class="offer-meta__item">
+                    <span>Цена</span>
+                    <strong data-offer-field="price">от 38 900 ₽</strong>
+                  </div>
+                </div>
+
+                <div class="offer-actions">
+                  <button class="offer-nav" type="button" data-offer-nav="-1">Назад</button>
+                  <button class="offer-nav" type="button" data-offer-nav="1">Далее</button>
+                  <button class="offer-cta" type="button" data-lead-open="calc-base">
+                    Получить расчет
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="offers-tip">Выберите карточку или листайте предложения кнопками «Назад» и «Далее».</p>
+        </section>
+
+        <section class="replacement-block" id="promo-block" aria-label="Замена столешницы">
+          <header class="replacement-head">
+            <p>СЕРВИС ЗАМЕНЫ</p>
+            <h2>ЗАМЕНА СТОЛЕШНИЦЫ</h2>
+            <span>Снимаем старую столешницу и ставим новую аккуратно и без лишних неудобств.</span>
+          </header>
+
+          <div class="replacement-stage">
+            <article class="replacement-steps" aria-label="Этапы замены">
+              <h3>Этапы</h3>
+
+              <button class="replacement-step is-active" type="button" data-replace-step="measure" aria-pressed="true">
+                <span class="replacement-step__num">01</span>
+                <span class="replacement-step__title">Замер и согласование</span>
+                <span class="replacement-step__text">
+                  Замер (шаблон), выбор цвета и профиля, согласование раковины и вырезов.
+                </span>
+              </button>
+
+              <button class="replacement-step" type="button" data-replace-step="build" aria-pressed="false">
+                <span class="replacement-step__num">02</span>
+                <span class="replacement-step__title">Изготовление</span>
+                <span class="replacement-step__text">
+                  Изготавливаем новую столешницу на производстве и подготавливаем все посадочные места.
+                </span>
+              </button>
+
+              <button class="replacement-step" type="button" data-replace-step="install" aria-pressed="false">
+                <span class="replacement-step__num">03</span>
+                <span class="replacement-step__title">Доставка и монтаж</span>
+                <span class="replacement-step__text">
+                  Привозим готовое изделие, демонтируем старую и сразу монтируем новую столешницу.
+                </span>
+              </button>
+            </article>
+
+            <article class="replacement-visual" data-replace-visual data-state="measure" aria-label="Было и стало">
+              <div class="replacement-work-navline">
+                <p class="replacement-work-title" data-replace-work-title>Замена №1 · Угловая кухня</p>
+                <div class="replacement-work-switch" data-replace-work-switch aria-label="Выбор работы"></div>
+              </div>
+
+              <div class="replacement-compare" data-replace-compare style="--split: 50%">
+                <div class="replacement-compare__base">
+                  <img
+                    src="./assets/replacement-jobs/job-1-before.jpeg"
+                    alt="До замены столешницы"
+                    data-replace-before
+                    loading="lazy"
+                  />
+                  <span class="replacement-compare__label replacement-compare__label--before">Было</span>
+                </div>
+
+                <div class="replacement-compare__overlay" data-replace-after-wrap>
+                  <img
+                    src="./assets/replacement-jobs/job-1-after.jpeg"
+                    alt="После замены столешницы"
+                    data-replace-after
+                    loading="lazy"
+                  />
+                  <span class="replacement-compare__label replacement-compare__label--after">Стало</span>
+                </div>
+
+                <span class="replacement-compare__divider" data-replace-divider aria-hidden="true"></span>
+              </div>
+
+              <label class="replacement-compare__control" for="replace-compare-range">
+                <span>Сдвигайте, чтобы сравнить «до/после»</span>
+                <input
+                  id="replace-compare-range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  step="1"
+                  data-replace-range
+                />
+              </label>
+
+              <p class="replacement-visual__hint" data-replace-description>
+                Точно снимаем размеры и формируем шаблон под вашу кухню.
+              </p>
+
+              <div class="replacement-work-gallery" aria-label="Фото выбранной работы">
+                <p class="replacement-work-gallery__lead">Нужны все ракурсы этого проекта?</p>
+                <button class="replacement-work-gallery__open" type="button" data-replace-open-gallery>
+                  <span class="replacement-work-gallery__icon" aria-hidden="true"></span>
+                  <span class="replacement-work-gallery__text">Все фото проекта</span>
+                  <span class="replacement-work-gallery__count" data-replace-gallery-count>0 фото</span>
+                </button>
+              </div>
+            </article>
+
+            <aside class="replacement-result">
+              <p class="replacement-result__label">Итог для вас</p>
+              <h3 data-replace-title>Доставка → демонтаж → монтаж за 1 день</h3>
+              <ul>
+                <li>Без ожидания кухни без столешницы.</li>
+                <li>Аккуратный демонтаж с защитой мебели и техники.</li>
+                <li>Монтаж и финальная герметизация в один выезд.</li>
+              </ul>
+              <button class="replacement-cta" type="button" data-lead-open="replace">
+                Оставить заявку на замену
+              </button>
+            </aside>
+          </div>
+
+          <div class="replacement-gallery-modal" data-replace-modal hidden>
+            <button class="replacement-gallery-modal__backdrop" type="button" data-replace-modal-close aria-label="Закрыть галерею"></button>
+            <div class="replacement-gallery-modal__dialog" role="dialog" aria-modal="true" aria-label="Все фото проекта">
+              <button class="replacement-gallery-modal__close" type="button" data-replace-modal-close aria-label="Закрыть">
+                ×
+              </button>
+              <p class="replacement-gallery-modal__title" data-replace-modal-title>Замена №1</p>
+
+              <div class="replacement-gallery-modal__stage">
+                <button class="replacement-gallery-modal__nav" type="button" data-replace-modal-nav="-1" aria-label="Предыдущее фото">
+                  Назад
+                </button>
+                <img src="./assets/replacement-jobs/job-1-after.jpeg" alt="Фото проекта" data-replace-modal-image loading="lazy" />
+                <button class="replacement-gallery-modal__nav" type="button" data-replace-modal-nav="1" aria-label="Следующее фото">
+                  Далее
+                </button>
+              </div>
+
+              <p class="replacement-gallery-modal__caption" data-replace-modal-caption>1 / 1</p>
+              <div class="replacement-gallery-modal__thumbs" data-replace-modal-thumbs></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="params-block" id="params-builder" aria-label="Пошаговый подбор параметров столешницы">
+          <header class="params-head">
+            <p>ПОШАГОВЫЙ ПОДБОР</p>
+            <h2>ОПРЕДЕЛИТЕ ПОШАГОВО ОПТИМАЛЬНЫЕ ПАРАМЕТРЫ ДЛЯ ВАШЕЙ СТОЛЕШНИЦЫ</h2>
+            <span class="params-head__note">Выберите параметры и сразу получите ориентировочную стоимость.</span>
+          </header>
+
+          <div class="params-stage">
+            <div class="params-steps">
+              <article class="params-step" data-step="shape">
+                <h3>1. Форма столешницы</h3>
+                <div class="params-options">
+                  <button class="params-option is-active" type="button" data-step="shape" data-value="straight">
+                    Прямая
+                  </button>
+                  <button class="params-option" type="button" data-step="shape" data-value="corner">
+                    Угловая
+                  </button>
+                  <button class="params-option" type="button" data-step="shape" data-value="u-shaped">
+                    П-образная
+                  </button>
+                  <button class="params-option" type="button" data-step="shape" data-value="island">
+                    С островом
+                  </button>
+                </div>
+              </article>
+
+              <article class="params-step" data-step="material">
+                <h3>2. Материал</h3>
+                <div class="params-options">
+                  <button class="params-option is-active" type="button" data-step="material" data-value="solid">
+                    Однотонная
+                  </button>
+                  <button class="params-option" type="button" data-step="material" data-value="chips">
+                    С чипами
+                  </button>
+                  <button class="params-option" type="button" data-step="material" data-value="marble">
+                    Под мрамор
+                  </button>
+                </div>
+              </article>
+
+              <article class="params-step" data-step="thickness">
+                <h3>3. Толщина</h3>
+                <div class="params-options">
+                  <button class="params-option" type="button" data-step="thickness" data-value="20">
+                    20 мм
+                  </button>
+                  <button class="params-option is-active" type="button" data-step="thickness" data-value="40">
+                    40 мм
+                  </button>
+                  <button class="params-option" type="button" data-step="thickness" data-value="60+">
+                    60 и более
+                  </button>
+                </div>
+              </article>
+
+              <article class="params-step" data-step="length">
+                <h3>4. Длина столешницы</h3>
+                <div class="params-options">
+                  <button class="params-option is-active" type="button" data-step="length" data-value="900">
+                    до 900
+                  </button>
+                  <button class="params-option" type="button" data-step="length" data-value="1800">
+                    до 1800
+                  </button>
+                  <button class="params-option" type="button" data-step="length" data-value="2700">
+                    до 2700
+                  </button>
+                  <button class="params-option" type="button" data-step="length" data-value="3600">
+                    до 3600
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <aside class="params-result" aria-live="polite">
+              <h3>Ваш набор параметров</h3>
+
+              <div class="params-progress">
+                <span class="params-progress__bar"></span>
+              </div>
+
+              <ul class="params-summary"></ul>
+
+              <div class="params-metrics">
+                <div class="params-metric">
+                  <span>Ориентировочная цена</span>
+                  <strong class="params-price">от 0 ₽</strong>
+                </div>
+                <div class="params-metric">
+                  <span>Срок изготовления</span>
+                  <strong class="params-time">от 0 дней</strong>
+                </div>
+              </div>
+
+              <button class="params-cta" type="button" data-lead-open="calc-precise">
+                Получить точный расчет
+              </button>
+            </aside>
+          </div>
+        </section>
+
+        <section
+          class="finish-calc"
+          id="finish-calculator"
+          aria-label="Калькулятор установки мойки, кромки и пристеночного бортика"
+        >
+          <header class="finish-calc__head">
+            <p>ФИНАЛЬНАЯ КОМПЛЕКТАЦИЯ</p>
+            <h2>ВАРИАНТЫ УСТАНОВКИ МОЙКИ, ТОРЦЕВОЙ КРОМКИ И ПРИСТЕНОЧНЫХ БОРТИКОВ</h2>
+            <span>Выберите все 3 группы и получите итоговую доплату к проекту в реальном времени.</span>
+          </header>
+
+          <div class="finish-calc__stage">
+            <div class="finish-calc__steps">
+              <article class="finish-step" data-finish-step="sink">
+                <h3>1. Установка мойки</h3>
+                <div class="finish-options">
+                  <button class="finish-option is-active" type="button" data-finish-step="sink" data-value="overmount">
+                    Накладная
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="sink" data-value="undermount">
+                    Подстольная
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="sink" data-value="flush">
+                    В уровень
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="sink" data-value="integrated">
+                    Интегрированная
+                  </button>
+                </div>
+              </article>
+
+              <article class="finish-step" data-finish-step="edge">
+                <h3>2. Торцевая кромка</h3>
+                <div class="finish-options">
+                  <button class="finish-option is-active" type="button" data-finish-step="edge" data-value="edge1">
+                    Кромка №1
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge2">
+                    Кромка №2
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge3">
+                    Кромка №3
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge4">
+                    Кромка №4
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge5">
+                    Кромка №5
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge6">
+                    Кромка №6
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge7">
+                    Кромка №7
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge8">
+                    Кромка №8
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge9">
+                    Кромка №9
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge10">
+                    Кромка №10
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge11">
+                    Кромка №11
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge12">
+                    Кромка №12
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge13">
+                    Кромка №13
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="edge" data-value="edge14">
+                    Кромка №14
+                  </button>
+                </div>
+              </article>
+
+              <article class="finish-step" data-finish-step="plinth">
+                <h3>3. Пристеночный бортик</h3>
+                <div class="finish-options">
+                  <button class="finish-option is-active" type="button" data-finish-step="plinth" data-value="none">
+                    Без бортика
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="plinth" data-value="mini">
+                    Мини 12 мм
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="plinth" data-value="classic">
+                    Классик 40 мм
+                  </button>
+                  <button class="finish-option" type="button" data-finish-step="plinth" data-value="shadow">
+                    Теневой 60 мм
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <article
+              class="finish-calc__visual"
+              data-finish-sink="overmount"
+              data-finish-edge="edge1"
+              data-finish-plinth="none"
+            >
+              <div class="finish-canvas">
+                <div class="finish-canvas__top"></div>
+                <div class="finish-canvas__front"></div>
+                <div class="finish-canvas__sink-hole"></div>
+                <div class="finish-canvas__sink-rim"></div>
+                <div class="finish-canvas__sink-bowl"></div>
+                <div class="finish-canvas__water"></div>
+                <div class="finish-canvas__edge"></div>
+                <div class="finish-canvas__plinth"></div>
+                <div class="finish-canvas__glow"></div>
+              </div>
+
+              <div class="finish-tags">
+                <span data-finish-tag="sink">Накладная мойка</span>
+                <span data-finish-tag="edge">Кромка №1</span>
+                <span data-finish-tag="plinth">Без бортика</span>
+              </div>
+            </article>
+
+            <aside class="finish-calc__result" aria-live="polite">
+              <h3 data-finish-field="title">Накладная мойка + №1 + без бортика</h3>
+              <p data-finish-field="description">
+                Базовый комплект с минимальной доплатой: быстрый монтаж и аккуратный внешний вид.
+              </p>
+
+              <ul class="finish-diffs"></ul>
+
+              <div class="finish-metrics">
+                <div class="finish-metric">
+                  <span>Уход</span>
+                  <strong data-finish-field="care">Стандартный</strong>
+                </div>
+                <div class="finish-metric">
+                  <span>Сложность монтажа</span>
+                  <strong data-finish-field="complexity">Низкая</strong>
+                </div>
+                <div class="finish-metric">
+                  <span>Визуальный класс</span>
+                  <strong data-finish-field="visual">Практичный</strong>
+                </div>
+              </div>
+
+              <div class="finish-total">
+                <div class="finish-total__item">
+                  <span>Доплата за комплектацию</span>
+                  <strong data-finish-field="extra">0 ₽</strong>
+                </div>
+                <div class="finish-total__item">
+                  <span>Итог по проекту</span>
+                  <strong data-finish-field="total">от 38 900 ₽</strong>
+                </div>
+              </div>
+
+              <button class="finish-cta" type="button" data-lead-open="calc-finish">
+                Получить расчет комплектации
+              </button>
+            </aside>
+          </div>
+
+          <p class="finish-tip">
+            Интерактив работает автоматически: если не нажимать кнопки, варианты переключаются сами. Нажмите любую
+            опцию, чтобы зафиксировать свой выбор.
+          </p>
+        </section>
+
+        <section class="edge-block" id="edge-profiles" aria-label="Варианты торцевой кромки Getalo">
+          <header class="edge-head">
+            <h2>ВАРИАНТЫ ТОРЦЕВОЙ КРОМКИ</h2>
+            <p>
+              Ваши фирменные профили кромки №1-№14. Выберите вариант и сразу посмотрите высоту, стиль и назначение.
+            </p>
+          </header>
+
+          <div class="edge-stage">
+            <div class="edge-tabs" role="tablist" aria-label="Каталог кромок" data-edge-tabs></div>
+
+            <article class="edge-visual" data-edge-type="r3">
+              <span class="edge-visual__badge" data-edge-field="badge">Кромка №1</span>
+              <div class="edge-visual__image-wrap">
+                <img
+                  class="edge-visual__image"
+                  data-edge-field="image"
+                  src="./assets/edge-profiles/kromka-1.webp"
+                  alt="Кромка №1"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <aside class="edge-info" aria-live="polite">
+              <h3 data-edge-field="title">Кромка №1</h3>
+              <p data-edge-field="description">
+                Универсальный мягкий профиль для рабочих столешниц с комфортным касанием по торцу.
+              </p>
+
+              <ul class="edge-diffs"></ul>
+
+              <div class="edge-metrics">
+                <div class="edge-metric">
+                  <span>Высота</span>
+                  <strong data-edge-field="height">20 / 40 / 60 мм</strong>
+                </div>
+                <div class="edge-metric">
+                  <span>Тип профиля</span>
+                  <strong data-edge-field="profile">Мягкое скругление</strong>
+                </div>
+                <div class="edge-metric">
+                  <span>Рекомендуем</span>
+                  <strong data-edge-field="use">Кухни и ванные</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="sinks-showcase" id="sinks-catalog" aria-label="Каталог моек и раковин из искусственного камня">
+          <header class="sinks-showcase__head">
+            <p>КАТАЛОГ МОЕК И РАКОВИН</p>
+            <h2>МОЙКИ И РАКОВИНЫ ИЗ КАМНЯ ДЛЯ РЕАЛЬНЫХ ПРОЕКТОВ</h2>
+            <span>
+              Подберите форму под задачу: классическая кухня, компактная зона, ванная комната или дизайнерский объект.
+            </span>
+          </header>
+
+          <div class="sinks-showcase__stage">
+            <div class="sinks-showcase__tabs" role="tablist" aria-label="Категории моек и раковин">
+              <button class="sinks-showcase__tab is-active" type="button" data-sink-catalog-id="round">
+                Круглые и эллипс
+              </button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="classic">
+                Classic / GL 400-450
+              </button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="classic-plus">
+                Classic / GL 450-800
+              </button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="compact">
+                Компактные C-V
+              </button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="bowl">Раковины Bowl</button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="boat">Раковины Boat</button>
+              <button class="sinks-showcase__tab" type="button" data-sink-catalog-id="design">
+                Дизайнерские
+              </button>
+            </div>
+
+            <article class="sinks-showcase__viewer">
+              <div class="sinks-showcase__image-wrap">
+                <img
+                  class="sinks-showcase__image"
+                  src="./assets/sinks-catalog/sink-page-01.png"
+                  alt="Каталог каменных моек и раковин, страница 1"
+                  data-sink-catalog-image
+                  loading="lazy"
+                />
+                <span class="sinks-showcase__page" data-sink-catalog-page>стр. 1 / 7</span>
+                <button class="sinks-showcase__zoom" type="button" data-sink-catalog-open>
+                  Открыть страницу крупно
+                </button>
+              </div>
+
+              <div class="sinks-showcase__metrics">
+                <div class="sinks-showcase__metric">
+                  <span>Лучше всего для</span>
+                  <strong data-sink-catalog-use>Кухни с мягкими линиями</strong>
+                </div>
+                <div class="sinks-showcase__metric">
+                  <span>Габариты</span>
+                  <strong data-sink-catalog-size>Ø380-500 мм</strong>
+                </div>
+                <div class="sinks-showcase__metric">
+                  <span>Глубина чаши</span>
+                  <strong data-sink-catalog-depth>до 200 мм</strong>
+                </div>
+              </div>
+            </article>
+
+            <aside class="sinks-showcase__info">
+              <span class="sinks-showcase__badge" data-sink-catalog-badge>Мойки для кухни</span>
+              <h3 data-sink-catalog-title>Круглые и эллипс модели</h3>
+              <p data-sink-catalog-description>
+                Удобный формат для компактной кухни и проектов с акцентом на мягкую геометрию.
+              </p>
+
+              <ul class="sinks-showcase__points" data-sink-catalog-points></ul>
+
+              <div class="sinks-showcase__models">
+                <span>Популярные модели</span>
+                <div class="sinks-showcase__model-list" data-sink-catalog-models></div>
+              </div>
+
+              <button class="sinks-showcase__cta" type="button" data-lead-open="calc-finish">
+                Подобрать мойку под проект
+              </button>
+            </aside>
+          </div>
+
+          <p class="sinks-showcase__note">
+            Блок собран на основе вашего каталога «Модельный ряд моек и раковин из искусственного камня», 7 страниц.
+          </p>
+        </section>
+
+        <section class="works-gallery" id="works-gallery" aria-label="Галерея наших работ из камня">
+          <header class="works-gallery__head">
+            <p>ПОРТФОЛИО РЕАЛЬНЫХ ОБЪЕКТОВ</p>
+            <h2>ПРИМЕРЫ РАБОТ</h2>
+            <span>
+              Выберите материал и листайте проекты: каждый кейс показывает стиль, комплектацию и ориентир по бюджету.
+            </span>
+          </header>
+
+          <div class="works-toolbar" role="tablist" aria-label="Материал камня">
+            <button class="works-filter is-active" type="button" data-work-filter="acrylic">
+              Искусственный акриловый камень
+            </button>
+            <button class="works-filter" type="button" data-work-filter="quartz">Кварцевый агломерат</button>
+            <button class="works-filter" type="button" data-work-filter="natural">Натуральный камень</button>
+          </div>
+
+          <div class="works-stage">
+            <div class="works-grid" role="listbox" aria-label="Примеры работ"></div>
+
+            <article class="works-viewer">
+              <div class="works-viewer__visual">
+                <button class="works-photo-nav works-photo-nav--prev" type="button" data-work-photo-nav="-1">
+                  ‹
+                </button>
+                <button class="works-photo-nav works-photo-nav--next" type="button" data-work-photo-nav="1">
+                  ›
+                </button>
+                <div class="works-viewer__image"></div>
+                <span class="works-viewer__badge" data-work-field="badge">Acrylic</span>
+                <span class="works-viewer__counter" data-work-photo-counter-inline>1 / 2</span>
+                <button class="works-photo-open" type="button" data-work-photo-open>Открыть фото</button>
+                <span class="works-viewer__shine"></span>
+              </div>
+
+              <div class="works-viewer__content">
+                <h3 data-work-field="title">Кухня Wave Line</h3>
+                <p data-work-field="description">
+                  Акриловая столешница с интегрированной мойкой и мягкой подсветкой рабочей зоны.
+                </p>
+
+                <ul class="works-points"></ul>
+
+                <div class="works-meta">
+                  <div class="works-meta__item">
+                    <span>Формат</span>
+                    <strong data-work-field="layout">Угловая + остров</strong>
+                  </div>
+                  <div class="works-meta__item">
+                    <span>Срок</span>
+                    <strong data-work-field="timeline">7 дней</strong>
+                  </div>
+                  <div class="works-meta__item">
+                    <span>Бюджет</span>
+                    <strong data-work-field="budget">от 128 000 ₽</strong>
+                  </div>
+                </div>
+
+                <div class="works-actions">
+                  <button class="works-nav" type="button" data-work-nav="-1">Назад</button>
+                  <button class="works-nav" type="button" data-work-nav="1">Далее</button>
+                  <button class="works-cta" type="button" data-lead-open="similar">
+                    Хочу похожий проект
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="works-tip">
+            Выберите проект вручную, листайте фото стрелками и открывайте в полноэкранном режиме.
+          </p>
+        </section>
+
+        <section class="order-block" id="order-form" aria-label="Форма заказа столешницы">
+          <header class="order-block__head">
+            <p>ФОРМА ЗАКАЗА</p>
+            <h2>ОПРЕДЕЛИЛИСЬ С ЗАКАЗОМ? УЗНАЙТЕ СТОИМОСТЬ ВАШЕЙ СТОЛЕШНИЦЫ</h2>
+            <span>
+              Заполните форму и посмотрите вживую, как будет изготавливаться ваша будущая столешница по шагам.
+            </span>
+          </header>
+
+          <div class="order-block__stage">
+            <article class="order-process" data-order-stage="measure">
+              <div class="order-process__top">
+                <h3>Как изготавливается ваша будущая столешница</h3>
+                <div class="order-progress">
+                  <span class="order-progress__bar"></span>
+                </div>
+              </div>
+
+              <div class="order-steps" role="tablist" aria-label="Этапы изготовления">
+                <button class="order-step is-active" type="button" data-order-stage="measure">Замер</button>
+                <button class="order-step" type="button" data-order-stage="template">Шаблон</button>
+                <button class="order-step" type="button" data-order-stage="fabrication">Производство</button>
+                <button class="order-step" type="button" data-order-stage="polish">Полировка</button>
+                <button class="order-step" type="button" data-order-stage="install">Монтаж</button>
+              </div>
+
+              <div class="order-process__viewer">
+                <div class="order-percent-card">
+                  <span class="order-percent-card__label">Готовность изготовления</span>
+                  <strong class="order-percent-card__value" data-order-field="percent">20%</strong>
+                  <div class="order-percent-card__track">
+                    <span class="order-percent-card__fill"></span>
+                  </div>
+                  <div class="order-percent-card__meta">
+                    <span data-order-field="percent-note">Старт проекта</span>
+                    <strong data-order-field="eta">до готовности: 7 дней</strong>
+                  </div>
+                </div>
+
+                <div class="order-process__content">
+                  <span class="order-process__badge" data-order-field="badge">Шаг 1</span>
+                  <h4 data-order-field="title">Профессиональный замер</h4>
+                  <p data-order-field="description">
+                    Выезжаем на объект, фиксируем геометрию помещения и все технические привязки.
+                  </p>
+                  <ul class="order-process__list"></ul>
+                </div>
+              </div>
+            </article>
+
+            <form class="order-form-panel">
+              <h3>Быстрый расчет стоимости</h3>
+              <p>Оставьте контакты, и мы подготовим расчет с учетом выбранного материала и комплектации.</p>
+
+              <div class="order-form-panel__grid">
+                <label class="order-field">
+                  <span>Ваше имя</span>
+                  <input type="text" name="name" placeholder="Например, Анна" required />
+                </label>
+                <label class="order-field">
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required />
+                </label>
+                <label class="order-field">
+                  <span>Материал</span>
+                  <select name="material">
+                    <option>Искусственный акриловый камень</option>
+                    <option>Кварцевый агломерат</option>
+                    <option>Натуральный камень</option>
+                  </select>
+                </label>
+                <label class="order-field">
+                  <span>Форма столешницы</span>
+                  <select name="shape">
+                    <option>Прямая</option>
+                    <option>Угловая</option>
+                    <option>П-образная</option>
+                    <option>С островом</option>
+                  </select>
+                </label>
+                <label class="order-field order-field--wide">
+                  <span>Комментарий к заказу</span>
+                  <textarea
+                    name="comment"
+                    placeholder="Размеры, техника, мойка, удобное время звонка..."
+                  ></textarea>
+                </label>
+              </div>
+
+              <button class="order-submit" type="submit">Узнать стоимость моей столешницы</button>
+              <p class="order-form-panel__note">
+                Перезвоним в течение 15 минут в рабочее время и предложим лучший вариант по бюджету.
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <section class="price-advantage" id="price-advantage" aria-label="Почему наши цены ниже чем у других">
+          <header class="price-advantage__head">
+            <p>ЧЕСТНАЯ ЭКОНОМИЯ</p>
+            <h2>ПОЧЕМУ НАШИ ЦЕНЫ НИЖЕ ЧЕМ У ДРУГИХ</h2>
+            <span>Сравните структуру стоимости и сразу увидите, на чем вы реально экономите.</span>
+          </header>
+
+          <div class="price-advantage__stage">
+            <article class="price-compare">
+              <div class="price-mode" role="tablist" aria-label="Сравнение цены">
+                <button class="price-mode__btn is-active" type="button" data-price-mode="others">
+                  Как обычно у других
+                </button>
+                <button class="price-mode__btn" type="button" data-price-mode="ours">Как у нас</button>
+              </div>
+
+              <div class="price-bars">
+                <div class="price-bar" data-price-row="showroom">
+                  <span class="price-bar__label">Наценка за шоурум</span>
+                  <div class="price-bar__track">
+                    <span class="price-bar__fill"></span>
+                  </div>
+                  <strong class="price-bar__value">0%</strong>
+                </div>
+
+                <div class="price-bar" data-price-row="middleman">
+                  <span class="price-bar__label">Посредники / дилеры</span>
+                  <div class="price-bar__track">
+                    <span class="price-bar__fill"></span>
+                  </div>
+                  <strong class="price-bar__value">0%</strong>
+                </div>
+
+                <div class="price-bar" data-price-row="logistics">
+                  <span class="price-bar__label">Логистика и хранение</span>
+                  <div class="price-bar__track">
+                    <span class="price-bar__fill"></span>
+                  </div>
+                  <strong class="price-bar__value">0%</strong>
+                </div>
+
+                <div class="price-bar" data-price-row="production">
+                  <span class="price-bar__label">Собственное производство</span>
+                  <div class="price-bar__track">
+                    <span class="price-bar__fill"></span>
+                  </div>
+                  <strong class="price-bar__value">0%</strong>
+                </div>
+
+                <div class="price-bar" data-price-row="warranty">
+                  <span class="price-bar__label">Гарантия и сервис</span>
+                  <div class="price-bar__track">
+                    <span class="price-bar__fill"></span>
+                  </div>
+                  <strong class="price-bar__value">0%</strong>
+                </div>
+              </div>
+
+              <p class="price-summary" data-price-field="summary">
+                У большинства компаний в стоимость заложены дополнительные накрутки за инфраструктуру и посредников.
+              </p>
+            </article>
+
+            <aside class="price-reasons">
+              <h3>За счет чего стоимость ниже</h3>
+              <ul class="price-reasons__list">
+                <li>Собственный цех и ЧПУ оборудование без аренды чужих линий.</li>
+                <li>Прямые закупки камня крупными партиями у поставщиков.</li>
+                <li>Команда замера, производства и монтажа внутри одной компании.</li>
+                <li>Без комиссий салонам и посредникам в цепочке продажи.</li>
+              </ul>
+
+              <div class="price-result">
+                <span>Экономия клиента в среднем</span>
+                <strong data-price-field="save">до 32%</strong>
+              </div>
+
+              <button class="price-cta" type="button" data-lead-open="calc-honest">
+                Получить честный расчет
+              </button>
+            </aside>
+          </div>
+
+          <p class="price-tip">
+            Переключайте режим сравнения и смотрите, как меняется структура цены в реальном времени.
+          </p>
+        </section>
+
+        <section class="geo-strip" id="geo-strip" aria-label="У нас заказывают в Москве и Подмосковье">
+          <div class="geo-strip__inner">
+            <div class="geo-strip__lead">
+              <h2>У НАС ЗАКАЗЫВАЮТ</h2>
+              <p>г. Москва и Подмосковье</p>
+            </div>
+
+            <div class="geo-strip__cities" role="listbox" aria-label="География заказов">
+              <button class="geo-city is-active" type="button">Москва</button>
+              <button class="geo-city" type="button">Химки</button>
+              <button class="geo-city" type="button">Красногорск</button>
+              <button class="geo-city" type="button">Мытищи</button>
+              <button class="geo-city" type="button">Одинцово</button>
+              <button class="geo-city" type="button">Балашиха</button>
+              <button class="geo-city" type="button">Люберцы</button>
+              <button class="geo-city" type="button">Подольск</button>
+              <button class="geo-city" type="button">Реутов</button>
+              <button class="geo-city" type="button">Королёв</button>
+            </div>
+
+            <div class="geo-strip__meta">
+              <span data-geo-field="note">Ежедневно принимаем новые заявки по региону</span>
+              <strong data-geo-field="summary">Москва + 9 городов Подмосковья</strong>
+            </div>
+          </div>
+        </section>
+
+        <footer class="main-footer" id="contacts" aria-label="Подвал сайта">
+          <div class="main-footer__top">
+            <div class="main-footer__brand">
+              <div class="main-footer__logo-wrap">
+                <img class="main-footer__logo" src="./getalo-logo.png" alt="Логотип Getalo" />
+                <span class="main-footer__logo-glow" aria-hidden="true"></span>
+              </div>
+              <p>Изделия из камня для Москвы и Подмосковья с полным циклом под ключ.</p>
+            </div>
+
+            <nav class="main-footer__nav" aria-label="Навигация по разделам">
+              <a href="#top">Главная</a>
+              <a href="#sinks-catalog">Мойки и раковины</a>
+              <a href="#works-gallery">Примеры работ</a>
+              <a href="#order-form">Заказ</a>
+              <a href="#contacts">Контакты</a>
+            </nav>
+
+            <div class="main-footer__contacts">
+              <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+              <a href="mailto:info@getalo.ru">info@getalo.ru</a>
+              <span>г. Мытищи, ул. Центральная, д. 15, стр. 2</span>
+            </div>
+          </div>
+
+          <div class="main-footer__bottom">
+            <span>© 2026 Getalo</span>
+            <span>Работаем по Москве и Московской области</span>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <div class="work-photo-modal" data-work-photo-modal hidden>
+      <button class="work-photo-modal__backdrop" type="button" data-work-photo-close aria-label="Закрыть"></button>
+      <section class="work-photo-modal__dialog" role="dialog" aria-modal="true" aria-label="Фото проекта">
+        <button class="work-photo-modal__close" type="button" data-work-photo-close aria-label="Закрыть">×</button>
+        <button class="work-photo-modal__nav work-photo-modal__nav--prev" type="button" data-work-photo-modal-nav="-1">
+          ‹
+        </button>
+        <div class="work-photo-modal__frame">
+          <img class="work-photo-modal__image" src="" alt="Фото проекта" />
+        </div>
+        <button class="work-photo-modal__nav work-photo-modal__nav--next" type="button" data-work-photo-modal-nav="1">
+          ›
+        </button>
+        <span class="work-photo-modal__counter" data-work-photo-counter-modal>1 / 2</span>
+      </section>
+    </div>
+
+    <div class="sinks-catalog-modal" data-sink-catalog-modal hidden>
+      <button
+        class="sinks-catalog-modal__backdrop"
+        type="button"
+        data-sink-catalog-close
+        aria-label="Закрыть"
+      ></button>
+      <section class="sinks-catalog-modal__dialog" role="dialog" aria-modal="true" aria-label="Страница каталога моек">
+        <button class="sinks-catalog-modal__close" type="button" data-sink-catalog-close aria-label="Закрыть">
+          ×
+        </button>
+        <button class="sinks-catalog-modal__nav sinks-catalog-modal__nav--prev" type="button" data-sink-catalog-nav="-1">
+          ‹
+        </button>
+        <div class="sinks-catalog-modal__frame">
+          <img class="sinks-catalog-modal__image" src="" alt="Страница каталога моек" />
+        </div>
+        <button class="sinks-catalog-modal__nav sinks-catalog-modal__nav--next" type="button" data-sink-catalog-nav="1">
+          ›
+        </button>
+        <div class="sinks-catalog-modal__meta">
+          <strong data-sink-catalog-modal-title>Каталог</strong>
+          <span data-sink-catalog-modal-page>стр. 1 / 7</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="lead-modal" data-lead-modal hidden>
+      <div class="lead-modal__backdrop" data-lead-close></div>
+      <section
+        class="lead-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Форма заявки"
+      >
+        <header class="lead-modal__head">
+          <h2 data-lead-field="title">Оставьте заявку</h2>
+          <button type="button" aria-label="Закрыть форму" data-lead-close>×</button>
+        </header>
+
+        <p class="lead-modal__desc" data-lead-field="description">
+          Заполните форму и менеджер свяжется с вами.
+        </p>
+
+        <form class="lead-modal__form">
+          <div class="lead-modal__grid">
+            <label class="lead-modal__field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Например, Александр" required />
+            </label>
+            <label class="lead-modal__field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required />
+            </label>
+          </div>
+
+          <div class="lead-modal__extra" data-lead-field="extra"></div>
+
+          <input type="hidden" name="request_type" data-lead-field="type" />
+          <input type="hidden" name="request_source" data-lead-field="source" />
+
+          <button class="lead-modal__submit" type="submit">Отправить заявку</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+name: GetaloIOS
+options:
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+configs:
+  Debug: debug
+  Release: release
+
+targets:
+  GetaloIOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources/Assets.xcassets
+        buildPhase: resources
+      - path: Resources/LaunchScreen.storyboard
+        buildPhase: resources
+      - path: Resources/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: Resources/SiteSnapshot
+        buildPhase: resources
+        type: folder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ru.getalo.app
+        PRODUCT_NAME: Getalo
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0.0
+        INFOPLIST_KEY_CFBundleDisplayName: Getalo
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.business
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UIStatusBarStyle: UIStatusBarStyleDarkContent
+        INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
+        INFOPLIST_KEY_UIUserInterfaceStyle: Light
+        INFOPLIST_KEY_NSCameraUsageDescription: Приложению нужен доступ к камере для фото в заявке.
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Приложению нужен доступ к микрофону для голосовых сообщений по заказу.
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: Приложению нужен доступ к фото для отправки материалов по проекту.
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: Приложению нужен доступ для сохранения изображений проекта.
+    scheme:
+      gatherCoverageData: false

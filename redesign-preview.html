@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Любо Дорого — Premium Campaign</title>
+    <meta
+      name="description"
+      content="Премиальный иммерсивный сайт домашней продукции: ручная лепка, фасовка и доставка."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./redesign-preview.css" />
+  </head>
+  <body class="loading">
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <p class="preloader-kicker">Premium Handmade Food</p>
+      <p class="preloader-title">Любо Дорого</p>
+      <div class="preloader-bar"><span id="preloaderBar"></span></div>
+    </div>
+
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-meter" aria-hidden="true"><span id="scrollMeter"></span></div>
+
+    <header class="topbar" id="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#top" aria-label="Любо Дорого">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Любо Дорого</span>
+        </a>
+
+        <nav class="topnav" aria-label="Разделы">
+          <a href="#experience">История</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#gallery">Галерея</a>
+          <a href="#order">Заказ</a>
+        </nav>
+
+        <a class="btn btn-primary btn-magnetic" href="https://t.me/lyubo_dorogo_pf" target="_blank" rel="noreferrer noopener">Заказать</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="experience" id="experience">
+        <div class="experience-track" id="experienceTrack">
+          <div class="experience-sticky">
+            <div class="media-stack" aria-hidden="true">
+              <video id="mediaLepka" src="./assets/client-drawn-v2/lepka-drawn-v2.mp4" muted playsinline preload="auto"></video>
+              <video id="mediaPack" src="./assets/client-drawn-v2/upakovka-drawn-v2.mp4" muted playsinline preload="auto"></video>
+              <div class="photo-layer" id="photoLayer">
+                <img id="photoA" src="./assets/client-drawn-v2/photo-1-drawn-v2.webp" alt="" />
+                <img id="photoB" src="./assets/client-drawn-v2/photo-2-drawn-v2.webp" alt="" />
+              </div>
+            </div>
+
+            <div class="experience-shade" aria-hidden="true"></div>
+
+            <div class="experience-ui container">
+              <p class="exp-kicker">Immersive Product Story</p>
+              <h1 id="phaseTitle">Ручная лепка каждой партии</h1>
+              <p class="exp-text" id="phaseText">
+                Мы формируем пельмени вручную, чтобы сохранить аккуратную форму и домашний вкус.
+              </p>
+
+              <div class="phase-progress">
+                <span id="phaseProgress"></span>
+              </div>
+
+              <div class="phase-pills" id="phasePills">
+                <button class="phase-pill is-active" type="button" data-phase="0">Лепка</button>
+                <button class="phase-pill" type="button" data-phase="1">Фасовка</button>
+                <button class="phase-pill" type="button" data-phase="2">Упаковка</button>
+              </div>
+
+              <p class="exp-scroll">SCROLL TO CONTINUE</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto reveal">
+        <div class="container manifesto-inner">
+          <p class="kicker">Небольшой бренд, большой стандарт качества</p>
+          <h2>
+            Домашние полуфабрикаты
+            <span>в премиальной подаче.</span>
+          </h2>
+          <p>
+            Белый и красный как основа бренда: чистота продукта, яркий характер,
+            честный состав и ручная работа в каждом заказе.
+          </p>
+        </div>
+      </section>
+
+      <section class="catalog reveal" id="catalog">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Каталог</p>
+            <h2>Коллекция вкуса</h2>
+          </div>
+
+          <div class="catalog-grid">
+            <article class="catalog-card tilt-card" data-tilt>
+              <img src="./assets/client-drawn-v2/photo-1-drawn-v2.webp" alt="Домашние пельмени" loading="lazy" />
+              <div class="catalog-body">
+                <h3>Пельмени ручной лепки</h3>
+                <p>Классический домашний вкус и идеальная форма.</p>
+                <div class="catalog-foot">
+                  <span>от 590 ₽</span>
+                  <button class="btn btn-dark btn-magnetic" type="button">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card tilt-card" data-tilt>
+              <img src="./assets/client-drawn-v2/photo-4-drawn-v2.webp" alt="Премиальная подача" loading="lazy" />
+              <div class="catalog-body">
+                <h3>Семейные наборы</h3>
+                <p>Форматы для ужина на каждый день и на праздник.</p>
+                <div class="catalog-foot">
+                  <span>от 690 ₽</span>
+                  <button class="btn btn-dark btn-magnetic" type="button">В корзину</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card tilt-card" data-tilt>
+              <img src="./assets/client-drawn-v2/photo-6-drawn-v2.webp" alt="Крафт упаковка" loading="lazy" />
+              <div class="catalog-body">
+                <h3>Крафт-упаковка</h3>
+                <p>Эстетично, аккуратно и удобно хранить в морозилке.</p>
+                <div class="catalog-foot">
+                  <span>от 420 ₽</span>
+                  <button class="btn btn-dark btn-magnetic" type="button">В корзину</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery reveal" id="gallery">
+        <div class="container">
+          <div class="section-head section-head-light">
+            <p class="kicker">Галерея</p>
+            <h2>Реальные кадры продукта</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <img class="gallery-item" src="./assets/client-drawn-v2/photo-2-drawn-v2.webp" alt="Пельмени в упаковке" loading="lazy" />
+            <img class="gallery-item" src="./assets/client-drawn-v2/photo-3-drawn-v2.webp" alt="Упаковка и подача" loading="lazy" />
+            <img class="gallery-item" src="./assets/client-drawn-v2/photo-5-drawn-v2.webp" alt="Подача пельменей" loading="lazy" />
+            <img class="gallery-item" src="./assets/client-drawn-v2/photo-6-drawn-v2.webp" alt="Крафт пакеты с пельменями" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="order reveal" id="order">
+        <div class="container order-inner">
+          <div>
+            <p class="kicker">Заказ</p>
+            <h2>Соберем ваш заказ сегодня</h2>
+            <p>
+              Напишите в Telegram или позвоните. Подберем нужный объем и формат
+              доставки под вас.
+            </p>
+          </div>
+
+          <div class="order-actions">
+            <a class="btn btn-primary btn-lg btn-magnetic" href="https://t.me/lyubo_dorogo_pf" target="_blank" rel="noreferrer noopener">Написать в Telegram</a>
+            <a class="btn btn-outline btn-lg btn-magnetic" href="tel:+79337327298">Позвонить: +7 933 732-72-98</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Любо Дорого</p>
+        <p>Домашние полуфабрикаты ручной работы</p>
+      </div>
+    </footer>
+
+    <nav class="mobile-dock" aria-label="Быстрые действия">
+      <a href="#catalog">Каталог</a>
+      <a href="tel:+79337327298">Позвонить</a>
+      <a href="https://t.me/lyubo_dorogo_pf" target="_blank" rel="noreferrer noopener">Заказать</a>
+    </nav>
+
+    <script src="./redesign-preview.js"></script>
+  </body>
+</html>

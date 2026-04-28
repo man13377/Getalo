@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сравнение: оригинал vs перерисовка v2</title>
+  <style>
+    body{margin:0;font-family:Manrope,Segoe UI,sans-serif;background:#0f1117;color:#fff}
+    .wrap{width:min(1200px,calc(100% - 32px));margin:24px auto 60px}
+    h1{font-size:28px;margin:0 0 8px}
+    p{opacity:.8}
+    .grid{display:grid;gap:16px}
+    .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#171a23;border:1px solid #2a2f3c;border-radius:14px;padding:12px}
+    .card{background:#0f1117;border:1px solid #2a2f3c;border-radius:10px;overflow:hidden}
+    .card h3{margin:0;padding:8px 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:#121621}
+    img,video{display:block;width:100%;height:auto;max-height:72vh;object-fit:contain;background:#000}
+    @media (max-width:900px){.pair{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Сравнение перерисовки v2</h1>
+    <p>Слева оригинал, справа новая рисованная версия.</p>
+
+    <div class="grid">
+      <section class="pair">
+        <div class="card"><h3>Фото оригинал</h3><img src="./assets/client/photo-2.webp" alt="orig" /></div>
+        <div class="card"><h3>Фото перерисовано v2</h3><img src="./assets/client-drawn-v2/photo-2-drawn-v2.webp" alt="drawn" /></div>
+      </section>
+
+      <section class="pair">
+        <div class="card"><h3>Видео оригинал</h3><video src="./assets/client/lepka.mp4" controls muted playsinline></video></div>
+        <div class="card"><h3>Видео перерисовано v2</h3><video src="./assets/client-drawn-v2/lepka-drawn-v2.mp4" controls muted playsinline></video></div>
+      </section>
+
+      <section class="pair">
+        <div class="card"><h3>Видео оригинал</h3><video src="./assets/client/upakovka.mp4" controls muted playsinline></video></div>
+        <div class="card"><h3>Видео перерисовано v2</h3><video src="./assets/client-drawn-v2/upakovka-drawn-v2.mp4" controls muted playsinline></video></div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F82D42980ECA200B4CBDBAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2820AA100E33EA5386C965B2 /* LaunchScreen.storyboard */; };
+		213CE0B6CD13160ADC63A074 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9C0177629F4E8DA0DE375CBE /* PrivacyInfo.xcprivacy */; };
+		59F219B7C197098062E61AC5 /* SiteSnapshot in Resources */ = {isa = PBXBuildFile; fileRef = 8178BF6A3651C59D899F4954 /* SiteSnapshot */; };
+		7001CE8460B8DF568DC8072D /* WebViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B3E73D2CF1D9101EDD832 /* WebViewState.swift */; };
+		7F70F23DF02C291072BFEBE2 /* OfflineOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA970425982760A574BC8FF2 /* OfflineOverlayView.swift */; };
+		80C32B0499AC26CA3B6B600C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF1F123232452C22C577ED3 /* Assets.xcassets */; };
+		97A81FE4B1197BCC509D64EB /* OrderRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94661480EE142569DED8E70E /* OrderRequestView.swift */; };
+		985ED50E29F42025B48388AB /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CF9124F9BB5F3D072C70F /* WebViewContainer.swift */; };
+		CD8271B6AFE0C8F7ED2603D4 /* RootWebScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F7BF4E1D617CAC9C18D233 /* RootWebScreen.swift */; };
+		D5FF0043656D3BCFEA5E6160 /* GetaloIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CFF11BDB4C56EAA0A10FF /* GetaloIOSApp.swift */; };
+		F06AD4F2815F554126D66736 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434C7ED1E680A9BD8380EFA /* AppConfig.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2820AA100E33EA5386C965B2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42E41E4E3553E1BA5FD4FB76 /* GetaloIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GetaloIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF1F123232452C22C577ED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7434C7ED1E680A9BD8380EFA /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		8178BF6A3651C59D899F4954 /* SiteSnapshot */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SiteSnapshot; path = Resources/SiteSnapshot; sourceTree = SOURCE_ROOT; };
+		94661480EE142569DED8E70E /* OrderRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequestView.swift; sourceTree = "<group>"; };
+		9C0177629F4E8DA0DE375CBE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CA970425982760A574BC8FF2 /* OfflineOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineOverlayView.swift; sourceTree = "<group>"; };
+		D57B3E73D2CF1D9101EDD832 /* WebViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewState.swift; sourceTree = "<group>"; };
+		E0F7BF4E1D617CAC9C18D233 /* RootWebScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWebScreen.swift; sourceTree = "<group>"; };
+		E74CF9124F9BB5F3D072C70F /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		F07CFF11BDB4C56EAA0A10FF /* GetaloIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetaloIOSApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A295FCC9EBC08D94DAE139A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EF1F123232452C22C577ED3 /* Assets.xcassets */,
+				2820AA100E33EA5386C965B2 /* LaunchScreen.storyboard */,
+				9C0177629F4E8DA0DE375CBE /* PrivacyInfo.xcprivacy */,
+				8178BF6A3651C59D899F4954 /* SiteSnapshot */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2EC59A7ADC0662E7FC448A8A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CA69E51F2354C7E80055D33E /* App */,
+				EF38EDE379803B9011D1E890 /* Config */,
+				8519E70832A2F0B8BD278CB6 /* Web */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8519E70832A2F0B8BD278CB6 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				E74CF9124F9BB5F3D072C70F /* WebViewContainer.swift */,
+				D57B3E73D2CF1D9101EDD832 /* WebViewState.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		CA69E51F2354C7E80055D33E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F07CFF11BDB4C56EAA0A10FF /* GetaloIOSApp.swift */,
+				CA970425982760A574BC8FF2 /* OfflineOverlayView.swift */,
+				94661480EE142569DED8E70E /* OrderRequestView.swift */,
+				E0F7BF4E1D617CAC9C18D233 /* RootWebScreen.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D1D41C67301FA547927541A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42E41E4E3553E1BA5FD4FB76 /* GetaloIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF38EDE379803B9011D1E890 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7434C7ED1E680A9BD8380EFA /* AppConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F833D23EE1D35D19951757DD = {
+			isa = PBXGroup;
+			children = (
+				0A295FCC9EBC08D94DAE139A /* Resources */,
+				2EC59A7ADC0662E7FC448A8A /* Sources */,
+				D1D41C67301FA547927541A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		783A21D5737C7D99887BBCE0 /* GetaloIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 856FC14407E55E93453A7B6A /* Build configuration list for PBXNativeTarget "GetaloIOS" */;
+			buildPhases = (
+				78CD8C7E18799B2925B815D2 /* Sources */,
+				55B96D9DB9B910E52F83B500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetaloIOS;
+			packageProductDependencies = (
+			);
+			productName = GetaloIOS;
+			productReference = 42E41E4E3553E1BA5FD4FB76 /* GetaloIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21E7140D96F047CAE01581EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					783A21D5737C7D99887BBCE0 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9F39B570B0420A30BEDCD2F4 /* Build configuration list for PBXProject "GetaloIOS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F833D23EE1D35D19951757DD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D1D41C67301FA547927541A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				783A21D5737C7D99887BBCE0 /* GetaloIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55B96D9DB9B910E52F83B500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C32B0499AC26CA3B6B600C /* Assets.xcassets in Resources */,
+				0F82D42980ECA200B4CBDBAE /* LaunchScreen.storyboard in Resources */,
+				213CE0B6CD13160ADC63A074 /* PrivacyInfo.xcprivacy in Resources */,
+				59F219B7C197098062E61AC5 /* SiteSnapshot in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78CD8C7E18799B2925B815D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06AD4F2815F554126D66736 /* AppConfig.swift in Sources */,
+				D5FF0043656D3BCFEA5E6160 /* GetaloIOSApp.swift in Sources */,
+				7F70F23DF02C291072BFEBE2 /* OfflineOverlayView.swift in Sources */,
+				97A81FE4B1197BCC509D64EB /* OrderRequestView.swift in Sources */,
+				CD8271B6AFE0C8F7ED2603D4 /* RootWebScreen.swift in Sources */,
+				985ED50E29F42025B48388AB /* WebViewContainer.swift in Sources */,
+				7001CE8460B8DF568DC8072D /* WebViewState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		06B36261BED87D7BD0A15B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		30BDCB749341247393C99543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B506503BA088DA1D29BF908E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Getalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложению нужен доступ к камере для фото в заявке.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Приложению нужен доступ к микрофону для голосовых сообщений по заказу.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Приложению нужен доступ для сохранения изображений проекта.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к фото для отправки материалов по проекту.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.getalo.app;
+				PRODUCT_NAME = Getalo;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED9AFA86386A10C7AF1D700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Getalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложению нужен доступ к камере для фото в заявке.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Приложению нужен доступ к микрофону для голосовых сообщений по заказу.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Приложению нужен доступ для сохранения изображений проекта.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к фото для отправки материалов по проекту.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.getalo.app;
+				PRODUCT_NAME = Getalo;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		856FC14407E55E93453A7B6A /* Build configuration list for PBXNativeTarget "GetaloIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B506503BA088DA1D29BF908E /* Debug */,
+				EED9AFA86386A10C7AF1D700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9F39B570B0420A30BEDCD2F4 /* Build configuration list for PBXProject "GetaloIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30BDCB749341247393C99543 /* Debug */,
+				06B36261BED87D7BD0A15B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21E7140D96F047CAE01581EB /* Project object */;
+}

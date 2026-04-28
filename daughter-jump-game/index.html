@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daughter Jump Adventure</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="top-bar">
+        <div class="identity">
+          <img
+            id="character-icon"
+            src="./assets/daughter-icon.png"
+            alt="Character icon"
+            width="64"
+            height="64"
+          />
+          <div>
+            <h1>Daughter Jump Adventure</h1>
+            <p>Run, jump, collect stars, and reach home.</p>
+          </div>
+        </div>
+        <div class="top-controls">
+          <button id="sound-toggle" type="button" aria-pressed="false">
+            Sound: On
+          </button>
+          <div class="stats">
+            <div class="pill">
+              <span>Stars</span>
+              <strong id="stars-count">0</strong>
+            </div>
+            <div class="pill">
+              <span>Best</span>
+              <strong id="best-count">0</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="playfield">
+        <canvas
+          id="game-canvas"
+          width="960"
+          height="540"
+          aria-label="Platform game"
+        ></canvas>
+
+        <div id="overlay" class="overlay hidden" role="status" aria-live="polite">
+          <h2 id="overlay-title">Ready?</h2>
+          <p id="overlay-text">Press Play to start.</p>
+          <button id="restart-btn" type="button">Play Again</button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <p>
+          <kbd>A</kbd> <kbd>D</kbd> or arrows to move.
+          <kbd>W</kbd>/<kbd>Space</kbd>/<kbd>Up</kbd> to jump.
+          <kbd>Enter</kbd> to restart after finish.
+        </p>
+      </footer>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
