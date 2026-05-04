@@ -19,6 +19,7 @@ coverage/
 .env.*
 !.env.example
 !.env.*.example
+api/mail.config.php
 
 # Caches
 .cache/

@@ -7,8 +7,7 @@
   let railAlwaysExpanded = !compactRailQuery.matches;
   const leadModal = document.querySelector("[data-lead-modal]");
   let railCollapseTimer = null;
-  const mailTarget = "serezha.nikulkin@mail.ru";
-  const mailEndpoint = `https://formsubmit.co/ajax/${mailTarget}`;
+  const mailEndpoint = new URL("./api/send-mail.php", window.location.href).toString();
   let toastRoot = null;
 
   const ensureToastRoot = () => {
@@ -52,12 +51,16 @@
       return "Не удалось отправить заявку. Проверьте интернет и повторите.";
     }
 
-    if (/needs activation/i.test(text) || /activate form/i.test(text)) {
-      return "Почта еще не активирована. Откройте письмо от FormSubmit и нажмите «Activate Form».";
-    }
-
     if (/open this page through a web server/i.test(text) || error?.code === "FILE_PROTOCOL") {
       return "Сайт открыт как файл. Запустите его через http://localhost, тогда отправка заработает.";
+    }
+
+    if (/SMTP/i.test(text) || /auth/i.test(text) || /mail config/i.test(text)) {
+      return "Почта на сервере пока не настроена или неверные SMTP-данные. Проверьте настройки в api/mail.config.php.";
+    }
+
+    if (/method not allowed/i.test(text)) {
+      return "Ошибка запроса к серверу. Обновите страницу и попробуйте снова.";
     }
 
     if (/Failed to fetch/i.test(text) || /NetworkError/i.test(text)) {
@@ -85,8 +88,6 @@
 
     const formData = new FormData(form);
     formData.set("_subject", subject);
-    formData.set("_captcha", "false");
-    formData.set("_template", "table");
     formData.set("form_name", formName);
     formData.set("site_page", window.location.href);
     formData.set("site_time", new Date().toLocaleString("ru-RU"));

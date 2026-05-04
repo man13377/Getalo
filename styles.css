@@ -868,9 +868,11 @@ a {
   inset: 0;
   background:
     linear-gradient(165deg, rgba(0, 0, 0, 0.12), transparent 52%),
-    url("./hero-kitchen.jpg") var(--preview-pos, 20% 54%) / cover no-repeat;
+    var(--preview-image, url("./hero-kitchen.jpg")) var(--preview-pos, 20% 54%) / cover no-repeat;
   transform: scale(1.04);
-  transition: background-position 0.35s ease;
+  transition:
+    background-position 0.35s ease,
+    filter 0.25s ease;
 }
 
 .countertop-viewer__preview::after {
@@ -970,6 +972,69 @@ a {
   list-style: none;
   display: grid;
   gap: 8px;
+}
+
+.countertop-gallery-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.countertop-gallery-open {
+  border: 0;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffd84d, #f0ba14);
+  color: #131313;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.countertop-gallery-count {
+  font-size: 12px;
+  color: #555555;
+  font-weight: 700;
+}
+
+.countertop-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.countertop-gallery-thumb {
+  border: 1px solid #c7c7c7;
+  height: 56px;
+  background-color: #e8e8e8;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.countertop-gallery-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.countertop-gallery-thumb.is-active {
+  transform: translateY(-1px);
+  border-color: #f0ba14;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+.countertop-gallery-thumb.is-active::after {
+  border-color: rgba(240, 186, 20, 0.72);
 }
 
 .process-item {
@@ -6823,6 +6888,22 @@ body.has-work-photo-modal {
     font-size: 20px;
     right: 8px;
     top: 8px;
+  }
+
+  .countertop-gallery-tools {
+    flex-wrap: wrap;
+  }
+
+  .countertop-gallery-count {
+    font-size: 11px;
+  }
+
+  .countertop-gallery-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .countertop-gallery-thumb {
+    height: 52px;
   }
 
   .order-block {

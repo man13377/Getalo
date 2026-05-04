@@ -84,7 +84,7 @@
     <aside class="right-rail" aria-label="Связаться с нами">
       <p class="right-rail__title">Связаться с нами</p>
 
-      <a class="right-rail__item right-rail__item--phone" href="#" target="_blank" rel="noopener">
+      <a class="right-rail__item right-rail__item--phone" href="tel:+79690892525">
         <span class="right-rail__icon" aria-hidden="true">☎</span>
         <span class="right-rail__text">Телефон</span>
       </a>
@@ -114,14 +114,14 @@
           </div>
 
           <div class="header-center">
-            <p>БЦ "Золотая Долина", офис 419</p>
+            <p>Ярославский проезд 7 а</p>
             <p>Пн-Пт: 11:00–19:00</p>
             <p>Сб-Вс: 12:00–17:00</p>
-            <a href="#">написать нам</a>
+            <a href="#!" data-lead-open="write">написать нам</a>
           </div>
 
           <div class="header-right">
-            <a class="phone" href="tel:+74950000000">8(495) 000-00-00</a>
+            <a class="phone" href="tel:+79690892525">+7 969 089-25-25</a>
             <div class="top-buttons">
               <button type="button" data-lead-open="call">заказать звонок</button>
               <button type="button" data-lead-open="calc-base">получить расчет</button>
@@ -154,6 +154,7 @@
             </h2>
             <input type="tel" name="phone" placeholder="ТЕЛЕФОН" required />
             <input type="text" name="name" placeholder="ВАШЕ ИМЯ" required />
+            <input class="form-hp" type="text" name="company" tabindex="-1" autocomplete="off" />
             <button type="submit">ПОЛУЧИТЬ СКИДКУ!</button>
           </form>
         </section>
@@ -333,6 +334,11 @@
                   </div>
 
                   <ol class="process-list"></ol>
+                  <div class="countertop-gallery-tools">
+                    <button class="countertop-gallery-open" type="button">Смотреть все фото</button>
+                    <span class="countertop-gallery-count" data-field="gallery-count">Фото: 1 / 1</span>
+                  </div>
+                  <div class="countertop-gallery-thumbs" aria-label="Мини-галерея столешниц"></div>
                 </div>
               </article>
             </div>
@@ -1100,6 +1106,7 @@
                 </label>
               </div>
 
+              <input class="form-hp" type="text" name="company" tabindex="-1" autocomplete="off" />
               <button class="order-submit" type="submit">Узнать стоимость моей столешницы</button>
               <p class="order-form-panel__note">
                 Перезвоним в течение 15 минут в рабочее время и предложим лучший вариант по бюджету.
@@ -1242,9 +1249,9 @@
             </nav>
 
             <div class="main-footer__contacts">
-              <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+              <a href="tel:+79690892525">+7 969 089-25-25</a>
               <a href="mailto:info@getalo.ru">info@getalo.ru</a>
-              <span>г. Мытищи, ул. Центральная, д. 15, стр. 2</span>
+              <span>Ярославский проезд 7 а</span>
             </div>
           </div>
 
@@ -1270,6 +1277,28 @@
           ›
         </button>
         <span class="work-photo-modal__counter" data-work-photo-counter-modal>1 / 2</span>
+      </section>
+    </div>
+
+    <div class="work-photo-modal" data-countertop-photo-modal hidden>
+      <button
+        class="work-photo-modal__backdrop"
+        type="button"
+        data-countertop-photo-close
+        aria-label="Закрыть"
+      ></button>
+      <section class="work-photo-modal__dialog" role="dialog" aria-modal="true" aria-label="Фото столешницы">
+        <button class="work-photo-modal__close" type="button" data-countertop-photo-close aria-label="Закрыть">×</button>
+        <button class="work-photo-modal__nav work-photo-modal__nav--prev" type="button" data-countertop-photo-modal-nav="-1">
+          ‹
+        </button>
+        <div class="work-photo-modal__frame">
+          <img class="work-photo-modal__image" src="" alt="Фото столешницы" />
+        </div>
+        <button class="work-photo-modal__nav work-photo-modal__nav--next" type="button" data-countertop-photo-modal-nav="1">
+          ›
+        </button>
+        <span class="work-photo-modal__counter" data-countertop-photo-counter-modal>1 / 1</span>
       </section>
     </div>
 
@@ -1333,6 +1362,7 @@
 
           <input type="hidden" name="request_type" data-lead-field="type" />
           <input type="hidden" name="request_source" data-lead-field="source" />
+          <input class="form-hp" type="text" name="company" tabindex="-1" autocomplete="off" />
 
           <button class="lead-modal__submit" type="submit">Отправить заявку</button>
         </form>
