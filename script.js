@@ -128,7 +128,7 @@
       payload = null;
     }
 
-    if (!response.ok || (payload && payload.success === "false")) {
+    if (!response.ok || (payload && (payload.success === false || payload.success === "false"))) {
       throw new Error(payload?.message || "Не удалось отправить заявку");
     }
 

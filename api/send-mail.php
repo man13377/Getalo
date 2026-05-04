@@ -176,6 +176,93 @@ function smtp_send_mail(array $config, string $toEmail, string $subject, string 
     }
 }
 
+function env_first(array $keys, string $default = ''): string
+{
+    foreach ($keys as $key) {
+        $value = getenv($key);
+        if ($value !== false && trim((string) $value) !== '') {
+            return trim((string) $value);
+        }
+    }
+
+    return $default;
+}
+
+function env_first_int(array $keys, int $default): int
+{
+    $value = env_first($keys, '');
+    if ($value === '') {
+        return $default;
+    }
+
+    $parsed = filter_var($value, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+    if ($parsed === false) {
+        return $default;
+    }
+
+    return (int) $parsed;
+}
+
+function env_first_bool(array $keys, bool $default): bool
+{
+    $value = env_first($keys, '');
+    if ($value === '') {
+        return $default;
+    }
+
+    $normalized = strtolower(trim($value));
+    if (in_array($normalized, ['1', 'true', 'yes', 'on'], true)) {
+        return true;
+    }
+
+    if (in_array($normalized, ['0', 'false', 'no', 'off'], true)) {
+        return false;
+    }
+
+    return $default;
+}
+
+function load_mail_config(): array
+{
+    $config = [];
+    $configPath = __DIR__ . '/mail.config.php';
+
+    if (is_file($configPath)) {
+        $loaded = require $configPath;
+        if (is_array($loaded)) {
+            $config = $loaded;
+        }
+    }
+
+    $defaults = [
+        'host' => env_first(['MAIL_HOST', 'SMTP_HOST', 'GETALO_SMTP_HOST'], 'mail.hosting.reg.ru'),
+        'port' => env_first_int(['MAIL_PORT', 'SMTP_PORT', 'GETALO_SMTP_PORT'], 465),
+        'encryption' => env_first(['MAIL_ENCRYPTION', 'SMTP_ENCRYPTION', 'GETALO_SMTP_ENCRYPTION'], 'ssl'),
+        'username' => env_first(['MAIL_USERNAME', 'SMTP_USERNAME', 'GETALO_SMTP_USERNAME'], ''),
+        'password' => env_first(['MAIL_PASSWORD', 'SMTP_PASSWORD', 'GETALO_SMTP_PASSWORD'], ''),
+        'from_name' => env_first(['MAIL_FROM_NAME', 'SMTP_FROM_NAME', 'GETALO_SMTP_FROM_NAME'], 'Getalo'),
+        'to_email' => env_first(['MAIL_TO_EMAIL', 'SMTP_TO_EMAIL', 'GETALO_SMTP_TO_EMAIL'], ''),
+        'reply_to' => env_first(['MAIL_REPLY_TO', 'SMTP_REPLY_TO', 'GETALO_SMTP_REPLY_TO'], ''),
+        'verify_peer' => env_first_bool(['MAIL_VERIFY_PEER', 'SMTP_VERIFY_PEER', 'GETALO_SMTP_VERIFY_PEER'], false),
+    ];
+
+    foreach ($defaults as $key => $value) {
+        if (!array_key_exists($key, $config) || $config[$key] === '' || $config[$key] === null) {
+            $config[$key] = $value;
+        }
+    }
+
+    if (!isset($config['to_email']) || trim((string) $config['to_email']) === '') {
+        $config['to_email'] = (string) ($config['username'] ?? '');
+    }
+
+    if (!isset($config['reply_to']) || trim((string) $config['reply_to']) === '') {
+        $config['reply_to'] = (string) ($config['username'] ?? '');
+    }
+
+    return $config;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     json_response(405, [
         'success' => false,
@@ -183,21 +270,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     ]);
 }
 
-$configPath = __DIR__ . '/mail.config.php';
-if (!is_file($configPath)) {
-    json_response(500, [
-        'success' => false,
-        'message' => 'Mail config file is missing',
-    ]);
-}
-
-$config = require $configPath;
-if (!is_array($config)) {
-    json_response(500, [
-        'success' => false,
-        'message' => 'Mail config is invalid',
-    ]);
-}
+$config = load_mail_config();
 
 $honeypot = compact_string((string) ($_POST['company'] ?? ''));
 if ($honeypot !== '') {
