@@ -154,6 +154,12 @@
         extraFields:
           '<label class="lead-modal__field lead-modal__field--wide"><span>Удобное время звонка</span><input type="text" name="call_time" placeholder="Например, сегодня после 18:00" /></label>',
       },
+      write: {
+        title: "Написать нам",
+        description: "Оставьте контакты и вопрос. Мы ответим и подберем лучшее решение под ваш проект.",
+        extraFields:
+          '<label class="lead-modal__field lead-modal__field--wide"><span>Ваш вопрос или пожелания</span><textarea name="message" rows="4" placeholder="Например: нужна консультация по материалу, срокам и стоимости"></textarea></label>',
+      },
       "calc-base": {
         title: "Получить расчет",
         description: "Сделаем предварительный расчет по вашим размерам и материалу.",
@@ -473,42 +479,15 @@
     }
 
     const heroSlides = [
-      {
-        src: "https://images.pexels.com/photos/18033166/pexels-photo-18033166.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "center 58%",
-      },
-      {
-        src: "https://images.pexels.com/photos/35493893/pexels-photo-35493893.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "20% 52%",
-      },
-      {
-        src: "https://images.pexels.com/photos/4119847/pexels-photo-4119847.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "34% 54%",
-      },
-      {
-        src: "https://images.pexels.com/photos/8082197/pexels-photo-8082197.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "48% 52%",
-      },
-      {
-        src: "https://images.pexels.com/photos/18078647/pexels-photo-18078647.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "62% 54%",
-      },
-      {
-        src: "https://images.pexels.com/photos/36777837/pexels-photo-36777837.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "76% 50%",
-      },
-      {
-        src: "https://images.pexels.com/photos/8135490/pexels-photo-8135490.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "84% 50%",
-      },
-      {
-        src: "https://images.pexels.com/photos/11018252/pexels-photo-11018252.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "24% 62%",
-      },
-      {
-        src: "https://images.pexels.com/photos/10117754/pexels-photo-10117754.jpeg?auto=compress&cs=tinysrgb&w=1800",
-        position: "70% 46%",
-      },
+      { src: "./assets/countertops/hero/hero-01.jpg", position: "center 55%" },
+      { src: "./assets/countertops/hero/hero-02.jpg", position: "center 54%" },
+      { src: "./assets/countertops/hero/hero-03.jpg", position: "center 52%" },
+      { src: "./assets/countertops/hero/hero-04.jpg", position: "center 52%" },
+      { src: "./assets/countertops/hero/hero-05.jpg", position: "center 53%" },
+      { src: "./assets/countertops/hero/hero-06.jpg", position: "center 52%" },
+      { src: "./assets/countertops/hero/hero-07.jpg", position: "center 51%" },
+      { src: "./assets/countertops/hero/hero-08.jpg", position: "center 52%" },
+      { src: "./assets/countertops/hero/hero-09.jpg", position: "center 54%" },
     ];
 
     if (!heroSlides.length) {
@@ -714,6 +693,19 @@
   const navButtons = Array.from(trustBlock.querySelectorAll(".countertop-nav__btn[data-nav]"));
   const processList = trustBlock.querySelector(".process-list");
   const preview = trustBlock.querySelector(".countertop-viewer__image");
+  const previewFrame = trustBlock.querySelector(".countertop-viewer__preview");
+  const galleryThumbs = trustBlock.querySelector(".countertop-gallery-thumbs");
+  const galleryOpenButton = trustBlock.querySelector(".countertop-gallery-open");
+  const galleryCount = trustBlock.querySelector('[data-field="gallery-count"]');
+  const countertopPhotoModal = document.querySelector("[data-countertop-photo-modal]");
+  const countertopPhotoModalImage = countertopPhotoModal?.querySelector(".work-photo-modal__image");
+  const countertopPhotoModalCounter = countertopPhotoModal?.querySelector("[data-countertop-photo-counter-modal]");
+  const countertopPhotoModalClose = Array.from(
+    countertopPhotoModal?.querySelectorAll("[data-countertop-photo-close]") || []
+  );
+  const countertopPhotoModalNavButtons = Array.from(
+    countertopPhotoModal?.querySelectorAll("[data-countertop-photo-modal-nav]") || []
+  );
 
   const fieldMap = {
     title: trustBlock.querySelector('[data-field="title"]'),
@@ -732,7 +724,17 @@
       thickness: "38 мм",
       edge: "№1",
       price: "от 38 900 ₽",
-      previewPosition: "18% 55%",
+      previewPosition: "center 54%",
+      photos: [
+        { src: "./assets/countertops/straight/straight-01.jpg", position: "center 54%" },
+        { src: "./assets/countertops/straight/straight-02.jpg", position: "center 53%" },
+        { src: "./assets/countertops/straight/straight-03.jpg", position: "center 53%" },
+        { src: "./assets/countertops/straight/straight-04.jpg", position: "center 54%" },
+        { src: "./assets/countertops/straight/straight-05.jpg", position: "center 53%" },
+        { src: "./assets/countertops/straight/straight-06.jpg", position: "center 53%" },
+        { src: "./assets/countertops/straight/straight-07.jpg", position: "center 54%" },
+        { src: "./assets/countertops/straight/straight-08.jpg", position: "center 54%" },
+      ],
       steps: {
         manufacture: [
           "Подтверждаем размеры и формируем чертеж по вашему проекту.",
@@ -755,7 +757,17 @@
       thickness: "38 мм",
       edge: "№6",
       price: "от 52 400 ₽",
-      previewPosition: "34% 56%",
+      previewPosition: "center 54%",
+      photos: [
+        { src: "./assets/countertops/corner/corner-01.jpg", position: "center 54%" },
+        { src: "./assets/countertops/corner/corner-02.jpg", position: "center 53%" },
+        { src: "./assets/countertops/corner/corner-03.jpg", position: "center 53%" },
+        { src: "./assets/countertops/corner/corner-04.jpg", position: "center 54%" },
+        { src: "./assets/countertops/corner/corner-05.jpg", position: "center 54%" },
+        { src: "./assets/countertops/corner/corner-06.jpg", position: "center 53%" },
+        { src: "./assets/countertops/corner/corner-07.jpg", position: "center 53%" },
+        { src: "./assets/countertops/corner/corner-08.jpg", position: "center 54%" },
+      ],
       steps: {
         manufacture: [
           "Строим шаблон угла, чтобы попасть в геометрию стен без щелей.",
@@ -778,7 +790,17 @@
       thickness: "38 мм",
       edge: "№12",
       price: "от 84 700 ₽",
-      previewPosition: "62% 52%",
+      previewPosition: "center 52%",
+      photos: [
+        { src: "./assets/countertops/island/island-01.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-02.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-03.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-04.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-05.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-06.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-07.jpg", position: "center 52%" },
+        { src: "./assets/countertops/island/island-08.jpg", position: "center 52%" },
+      ],
       steps: {
         manufacture: [
           "Проектируем остров с учетом свесов и посадочных мест.",
@@ -801,7 +823,17 @@
       thickness: "38 мм",
       edge: "№4",
       price: "от 73 600 ₽",
-      previewPosition: "79% 50%",
+      previewPosition: "center 52%",
+      photos: [
+        { src: "./assets/countertops/u-shaped/u-shaped-01.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-02.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-03.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-04.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-05.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-06.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-07.jpg", position: "center 52%" },
+        { src: "./assets/countertops/u-shaped/u-shaped-08.jpg", position: "center 52%" },
+      ],
       steps: {
         manufacture: [
           "Формируем детальный шаблон с учетом всех трех сторон и угловых примыканий.",
@@ -820,13 +852,33 @@
   };
 
   const hasAllFields = Object.values(fieldMap).every(Boolean);
+  const hasCountertopGallery = galleryThumbs && galleryOpenButton && galleryCount;
+  const cssUrl = (value) => `url("${String(value).replace(/"/g, '\\"')}")`;
 
-  if (!typeCards.length || !modeButtons.length || !processList || !preview || !hasAllFields) {
+  if (
+    !typeCards.length ||
+    !modeButtons.length ||
+    !processList ||
+    !preview ||
+    !previewFrame ||
+    !hasAllFields ||
+    !hasCountertopGallery
+  ) {
     return;
   }
 
   let currentType = typeCards.find((card) => card.classList.contains("is-active"))?.dataset.type || "straight";
   let currentMode = modeButtons.find((button) => button.classList.contains("is-active"))?.dataset.mode || "manufacture";
+  let currentPhotoIndex = 0;
+  let modalPhotoIndex = 0;
+
+  const getCountertopPhotos = (model) => {
+    if (Array.isArray(model?.photos) && model.photos.length) {
+      return model.photos;
+    }
+
+    return [{ src: "./assets/countertops/straight/straight-01.jpg", position: model?.previewPosition || "center 54%" }];
+  };
 
   function renderProcessItems(steps) {
     processList.innerHTML = "";
@@ -853,6 +905,39 @@
     });
   }
 
+  function renderCountertopPreview(model) {
+    const photos = getCountertopPhotos(model);
+    currentPhotoIndex = (currentPhotoIndex + photos.length) % photos.length;
+    const photo = photos[currentPhotoIndex];
+
+    preview.style.setProperty("--preview-image", cssUrl(photo.src));
+    preview.style.setProperty("--preview-pos", photo.position || model.previewPosition || "center 54%");
+    galleryCount.textContent = `Фото: ${currentPhotoIndex + 1} / ${photos.length}`;
+  }
+
+  function renderCountertopThumbs(model) {
+    const photos = getCountertopPhotos(model);
+    galleryThumbs.innerHTML = "";
+
+    photos.forEach((photo, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "countertop-gallery-thumb";
+      if (index === currentPhotoIndex) {
+        button.classList.add("is-active");
+      }
+      button.setAttribute("aria-label", `Фото ${index + 1}`);
+      button.style.backgroundImage = cssUrl(photo.src);
+      button.style.backgroundPosition = photo.position || model.previewPosition || "center";
+      button.addEventListener("click", () => {
+        currentPhotoIndex = index;
+        renderCountertopPreview(model);
+        renderCountertopThumbs(model);
+      });
+      galleryThumbs.append(button);
+    });
+  }
+
   function renderCountertop() {
     const model = countertopData[currentType];
     if (!model) {
@@ -865,7 +950,6 @@
     fieldMap.thickness.textContent = model.thickness;
     fieldMap.edge.textContent = model.edge;
     fieldMap.price.textContent = model.price;
-    preview.style.setProperty("--preview-pos", model.previewPosition);
 
     typeCards.forEach((card) => {
       card.classList.toggle("is-active", card.dataset.type === currentType);
@@ -877,6 +961,8 @@
 
     const steps = model.steps[currentMode] || [];
     renderProcessItems(steps);
+    renderCountertopPreview(model);
+    renderCountertopThumbs(model);
   }
 
   typeCards.forEach((card) => {
@@ -887,6 +973,7 @@
       }
 
       currentType = type;
+      currentPhotoIndex = 0;
       renderCountertop();
     });
   });
@@ -913,8 +1000,116 @@
       const index = typeCards.findIndex((card) => card.dataset.type === currentType);
       const nextIndex = (index + step + typeCards.length) % typeCards.length;
       currentType = typeCards[nextIndex].dataset.type || currentType;
+      currentPhotoIndex = 0;
       renderCountertop();
     });
+  });
+
+  const openCountertopPhotoModal = () => {
+    if (!countertopPhotoModal || !countertopPhotoModalImage) {
+      return;
+    }
+
+    const model = countertopData[currentType];
+    if (!model) {
+      return;
+    }
+
+    const photos = getCountertopPhotos(model);
+    modalPhotoIndex = currentPhotoIndex;
+    const photo = photos[modalPhotoIndex];
+
+    countertopPhotoModalImage.src = photo.src;
+    countertopPhotoModalImage.alt = `${model.title} — фото ${modalPhotoIndex + 1}`;
+    if (countertopPhotoModalCounter) {
+      countertopPhotoModalCounter.textContent = `${modalPhotoIndex + 1} / ${photos.length}`;
+    }
+
+    countertopPhotoModal.hidden = false;
+    countertopPhotoModal.style.display = "grid";
+    document.body.classList.add("has-work-photo-modal");
+  };
+
+  const closeCountertopPhotoModal = () => {
+    if (!countertopPhotoModal) {
+      return;
+    }
+
+    countertopPhotoModal.hidden = true;
+    countertopPhotoModal.style.display = "none";
+    document.body.classList.remove("has-work-photo-modal");
+  };
+
+  const shiftCountertopModalPhoto = (step) => {
+    const model = countertopData[currentType];
+    if (!model) {
+      return;
+    }
+
+    const photos = getCountertopPhotos(model);
+    if (photos.length < 2) {
+      return;
+    }
+
+    modalPhotoIndex = (modalPhotoIndex + step + photos.length) % photos.length;
+    currentPhotoIndex = modalPhotoIndex;
+    const photo = photos[modalPhotoIndex];
+
+    if (countertopPhotoModalImage) {
+      countertopPhotoModalImage.src = photo.src;
+      countertopPhotoModalImage.alt = `${model.title} — фото ${modalPhotoIndex + 1}`;
+    }
+    if (countertopPhotoModalCounter) {
+      countertopPhotoModalCounter.textContent = `${modalPhotoIndex + 1} / ${photos.length}`;
+    }
+
+    renderCountertopPreview(model);
+    renderCountertopThumbs(model);
+  };
+
+  galleryOpenButton.addEventListener("click", () => {
+    openCountertopPhotoModal();
+  });
+
+  previewFrame.addEventListener("click", () => {
+    openCountertopPhotoModal();
+  });
+
+  countertopPhotoModalClose.forEach((button) => {
+    button.addEventListener("click", () => {
+      closeCountertopPhotoModal();
+    });
+  });
+
+  countertopPhotoModalNavButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const step = Number(button.dataset.countertopPhotoModalNav || 0);
+      if (!step) {
+        return;
+      }
+
+      shiftCountertopModalPhoto(step);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!countertopPhotoModal || countertopPhotoModal.hidden) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeCountertopPhotoModal();
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      shiftCountertopModalPhoto(-1);
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      shiftCountertopModalPhoto(1);
+    }
   });
 
   renderCountertop();
